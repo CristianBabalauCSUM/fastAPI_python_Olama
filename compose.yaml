@@ -10,9 +10,9 @@
 services:
   server:
     build:
-      context: .venv
+      context: .
     ports:
-      - 8855:8855
+      - 8885:8885
 
 # The commented out section below is an example of how to define a PostgreSQL
 # database that your application can use. `depends_on` tells Docker Compose to

@@ -42,10 +42,10 @@ RUN --mount=type=cache,target=/root/.cache/pip \
 USER appuser
 
 # Copy the source code into the container.
-COPY .venv .
+COPY . .
 
 # Expose the port that the application listens on.
-EXPOSE 8855
+EXPOSE 8885
 
 # Run the application.
-CMD python3 -m uvicorn 'app:app' --reload --host=0.0.0.0 --port=8855
+CMD uvicorn 'app:app' --host=0.0.0.0 --port=8885
